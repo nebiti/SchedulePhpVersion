@@ -8,13 +8,13 @@ const ScheduleForm = ({ history }) => {
     const urlData = "http://192.168.1.3/mct_sch/api.php";
     const classes = useStyle();
     const [date, setDate] = React.useState('');
-    const [type, setDeviceType] = React.useState('');
+    const [type, setDeviceType] = React.useState('none');
     const [company, setCompany] = React.useState('');
     const [location, setLocation] = React.useState('');
     const [contactNum, setContactNum] = React.useState(0);
     const [accesoriesQty, setAccessoriesQty] = React.useState(0);
     const [deviceQty, setDeviceQty] = React.useState(0);
-    const [accesoriesType, setAccessoriesType] = React.useState('');
+    const [accesoriesType, setAccessoriesType] = React.useState('none');
     const [jobType, setJobType] = React.useState('');
     const [technician, setTechnician] = React.useState([]);
     const [status, setStatus] = React.useState('');
@@ -84,7 +84,7 @@ const ScheduleForm = ({ history }) => {
                                     <Box paddingY={2} />
                                     <FormControl classes={{ root: classes.formControl }}>
                                         <InputLabel>Device Type</InputLabel>
-                                        <Select required
+                                        <Select 
                                             value={type}
                                             onChange={(e) => { setDeviceType(e.target.value) }}
                                         >
@@ -94,11 +94,11 @@ const ScheduleForm = ({ history }) => {
                                         </Select>
                                     </FormControl>
                                     <Box paddingY={2} />
-                                    <Box marginX={3}><TextField required variant="outlined" type="number" label="Device Qty" onChange={(e) => { setDeviceQty(e.target.value) }} value={deviceQty} /></Box>
+                                    <Box marginX={3}><TextField variant="outlined" type="number" label="Device Qty" onChange={(e) => { setDeviceQty(e.target.value) }} value={deviceQty} /></Box>
                                     <Box paddingY={2} />
                                     <FormControl classes={{ root: classes.formControl }}>
                                         <InputLabel>Accessories Type</InputLabel>
-                                        <Select required
+                                        <Select 
                                             value={accesoriesType}
                                             onChange={(e) => { setAccessoriesType(e.target.value) }}
                                         >
@@ -108,7 +108,7 @@ const ScheduleForm = ({ history }) => {
                                         </Select>
                                     </FormControl>
                                     <Box paddingY={2} />
-                                    <Box marginX={3}><TextField required variant="outlined" type="number" label="Accesories Qty" onChange={(e) => { setAccessoriesQty(e.target.value) }} value={accesoriesQty} /></Box>
+                                    <Box marginX={3}><TextField variant="outlined" type="number" label="Accesories Qty" onChange={(e) => { setAccessoriesQty(e.target.value) }} value={accesoriesQty} /></Box>
                                     <Box paddingY={2} />
                                     <FormControl classes={{ root: classes.formControl }}>
                                         <InputLabel>Technician Assigned</InputLabel>
