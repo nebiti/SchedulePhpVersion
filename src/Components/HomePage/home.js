@@ -34,26 +34,6 @@ const Home = () => {
                     </ListItem>
                     <Box height={20} />
                 </Link>
-                <Link to='/Devices' className={classes.links}>
-                    <ListItem classes={{ root: classes.itemColor }} button>
-                        <ListItemIcon><Devices /></ListItemIcon>
-                        <ListItemText>Device Management</ListItemText>
-                    </ListItem>
-                    <Box height={20} />
-                </Link>
-                <Link to='/Accessories' className={classes.links}>
-                    <ListItem classes={{ root: classes.itemColor }} button>
-                        <ListItemIcon><Router /></ListItemIcon>
-                        <ListItemText>Accessories Management</ListItemText>
-                    </ListItem>
-                </Link>
-                <Box height={20} />
-                <Link to='/Technicians' className={classes.links}>
-                    <ListItem classes={{ root: classes.itemColor }} button>
-                        <ListItemIcon><Build /></ListItemIcon>
-                        <ListItemText>Technician Management</ListItemText>
-                    </ListItem>
-                </Link>
             </List>
         </div>
     )
